@@ -1,0 +1,46 @@
+<form fxLayout="row" fxLayoutAlign="center center" #contactForm="ngForm" class="form">
+    <div fxLayout="column" fxLayoutAlign="center center" fxFlex="50">
+        <div fxLayout="column" fxLayoutAlign="start stretch" fxFlex="100" class="fullwidth">
+            <h1>Taxi App</h1>
+            <div fxLayout="column" fxLayoutAlign="center center">
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <div fxLayout="column" fxLayoutAlign="start stretch" class="nameField">
+                        <mat-form-field appearance="outline" class="input">
+                            <mat-label>Taxi Fare</mat-label>
+                            <input matInput placeholder="R" type="text" name="taxi" [(ngModel)]="formValue.taxi">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <div fxLayout="column" fxLayoutAlign="start stretch" fxFlex="100" class="fullwidth">
+                        <mat-form-field appearance="outline" class="input">
+                            <mat-label>Money Paid</mat-label>
+                            <input matInput placeholder="R" type="text" id="paid" name="paid" [(ngModel)]="formValue.paid">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <div fxLayout="column" fxLayoutAlign="start stretch" fxFlex="100" class="fullwidth">
+                        <mat-form-field appearance="outline" class="input">
+                            <mat-label>Number Of People Paid</mat-label>
+                            <input matInput placeholder="Number Of People Paid" type="text" name="people" [(ngModel)]="formValue.people">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <mat-form-field appearance="outline" class="input">
+                        <input matInput placeholder="R" type="text" name="number" [(ngModel)]="change" disabled>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="start stretch" fxFlex="100" class="fullwidth">
+            <section>
+                <div class="example-button-row">
+                    <button mat-raised-button color="primary" type="submit" (click)="submitForm()">Calculate</button>
+                    <p></p>
+                </div>
+            </section>
+        </div>
+    </div>
+</form>
